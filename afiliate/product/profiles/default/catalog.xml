@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<object name="portal_catalog">
+    <index name="programName" meta_type="ZCTextIndex">
+        <indexed_attr value="programName"/>
+        <extra name="index_type" value="Okapi BM25 Rank"/>
+        <extra name="lexicon_id" value="plone_lexicon"/>
+    </index>
+    <column value="programName"/>
+
+    <index name="programUrl" meta_type="FieldIndex">
+        <indexed_attr value="programUrl"/>
+    </index>
+    <column value="programUrl"/>
+
+    <index name="catalogName" meta_type="FieldIndex">
+        <indexed_attr value="catalogName"/>
+    </index>
+    <column value="catalogName"/>
+
+    <index name="lastUpdated" meta_type="DateIndex">
+        <indexed_attr value="lastUpdated"/>
+    </index>
+    <column value="lastUpdated"/>
+
+    <!-- maybe productName should use FieldIndex ?? -->
+    <index name="productName" meta_type="ZCTextIndex">
+        <indexed_attr value="productName"/>
+        <extra name="index_type" value="Okapi BM25 Rank"/>
+        <extra name="lexicon_id" value="plone_lexicon"/>
+    </index>
+    <column value="productName"/>
+
+<!-- set keyword must be list type () or [] -->
+    <index name="keywords" meta_type="KeywordIndex">
+        <indexed_attr value="keywords"/>
+    </index>
+    <column value="keywords"/>
+
+    <index name="sku" meta_type="FieldIndex">
+        <indexed_attr value="sku"/>
+    </index>
+    <column value="sku"/>
+
+    <index name="manufacturer" meta_type="FieldIndex">
+        <indexed_attr value="manufacturer"/>
+    </index>
+    <column value="manufacturer"/>
+
+    <index name="manufacturerId" meta_type="FieldIndex">
+        <indexed_attr value="manufacturerId"/>
+    </index>
+    <column value="manufacturerId"/>
+
+    <index name="upc" meta_type="FieldIndex">
+        <indexed_attr value="upc"/>
+    </index>
+    <column value="upc"/>
+
+    <index name="isbn" meta_type="FieldIndex">
+        <indexed_attr value="isbn"/>
+    </index>
+    <column value="isbn"/>
+
+    <index name="currency" meta_type="FieldIndex">
+        <indexed_attr value="currency"/>
+    </index>
+    <column value="currency"/>
+
+    <index name="salePrice" meta_type="FieldIndex">
+        <indexed_attr value="salePrice"/>
+    </index>
+    <column value="salePrice"/>
+
+    <index name="price" meta_type="FieldIndex">
+        <indexed_attr value="price"/>
+    </index>
+    <column value="price"/>
+
+    <index name="retailPrice" meta_type="FieldIndex">
+        <indexed_attr value="retailPrice"/>
+    </index>
+    <column value="retailPrice"/>
+
+    <index name="fromPrice" meta_type="FieldIndex">
+        <indexed_attr value="fromPrice"/>
+    </index>
+    <column value="fromPrice"/>
+
+    <index name="buyUrl" meta_type="FieldIndex">
+        <indexed_attr value="buyUrl"/>
+    </index>
+    <column value="buyUrl"/>
+
+    <index name="impressionUrl" meta_type="FieldIndex">
+        <indexed_attr value="impressionUrl"/>
+    </index>
+    <column value="impressionUrl"/>
+
+    <index name="imageUrl" meta_type="FieldIndex">
+        <indexed_attr value="imageUrl"/>
+    </index>
+    <column value="imageUrl"/>
+
+    <index name="advertiserCategory" meta_type="FieldIndex">
+        <indexed_attr value="advertiserCategory"/>
+    </index>
+    <column value="advertiserCategory"/>
+
+    <index name="thirdPartyId" meta_type="FieldIndex">
+        <indexed_attr value="thirdPartyId"/>
+    </index>
+    <column value="thirdPartyId"/>
+
+<!-- set keyword must be list type () or [] -->
+    <index name="thirdPartyCategory" meta_type="KeywordIndex">
+        <indexed_attr value="thirdPartyCategory"/>
+    </index>
+    <column value="thirdPartyCategory"/>
+
+    <index name="author" meta_type="FieldIndex">
+        <indexed_attr value="author"/>
+    </index>
+    <column value="author"/>
+
+    <index name="artist" meta_type="FieldIndex">
+        <indexed_attr value="artist"/>
+    </index>
+    <column value="artist"/>
+
+    <index name="publicationTitle" meta_type="ZCTextIndex">
+        <indexed_attr value="publicationTitle"/>
+        <extra name="index_type" value="Okapi BM25 Rank"/>
+        <extra name="lexicon_id" value="plone_lexicon"/>
+    </index>
+    <column value="publicationTitle"/>
+
+    <index name="publisher" meta_type="FieldIndex">
+        <indexed_attr value="publisher"/>
+    </index>
+    <column value="publisher"/>
+
+    <index name="label" meta_type="FieldIndex">
+        <indexed_attr value="label"/>
+    </index>
+    <column value="label"/>
+
+    <index name="format" meta_type="FieldIndex">
+        <indexed_attr value="format"/>
+    </index>
+    <column value="format"/>
+
+    <index name="special" meta_type="FieldIndex">
+        <indexed_attr value="special"/>
+    </index>
+    <column value="special"/>
+
+    <index name="gift" meta_type="FieldIndex">
+        <indexed_attr value="gift"/>
+    </index>
+    <column value="gift"/>
+
+    <index name="promotionalText" meta_type="ZCTextIndex">
+        <indexed_attr value="promotionalText"/>
+        <extra name="index_type" value="Okapi BM25 Rank"/>
+        <extra name="lexicon_id" value="plone_lexicon"/>
+    </index>
+    <column value="promotionalText"/>
+
+    <index name="offLine" meta_type="FieldIndex">
+        <indexed_attr value="offLine"/>
+    </index>
+    <column value="offLine"/>
+
+    <index name="onLine" meta_type="FieldIndex">
+        <indexed_attr value="onLine"/>
+    </index>
+    <column value="onLine"/>
+
+    <index name="inStock" meta_type="FieldIndex">
+        <indexed_attr value="inStock"/>
+    </index>
+    <column value="inStock"/>
+
+    <index name="condition" meta_type="FieldIndex">
+        <indexed_attr value="condition"/>
+    </index>
+    <column value="condition"/>
+
+    <index name="warranty" meta_type="ZCTextIndex">
+        <indexed_attr value="warranty"/>
+        <extra name="index_type" value="Okapi BM25 Rank"/>
+        <extra name="lexicon_id" value="plone_lexicon"/>
+    </index>
+    <column value="warranty"/>
+
+    <index name="standardShippingCost" meta_type="FieldIndex">
+        <indexed_attr value="standardShippingCost"/>
+    </index>
+    <column value="standardShippingCost"/>
+
+</object>
+
