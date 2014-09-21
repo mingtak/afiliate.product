@@ -101,6 +101,158 @@ class IProductData(form.Schema, IImageScaleTraversable):
         required=True,
     )
 
+    salePrice = schema.Float(
+        title=_(u"Sale price"),
+        description=_(u"Optional sale price for the product if different from the actual price."),
+        required=False,
+    )
+
+    price = schema.Float(
+        title=_(u"Price"),
+        description=_(u"The selling price of the product (decimal format)."),
+        required=False,
+    )
+
+    retailPrice = schema.Float(
+        title=_(u"Retail price"),
+        description=_(u"The retail price or manufacturer suggested retail price of the product."),
+        required=False,
+    )
+
+    fromPrice = schema.TextLine(
+        title=_(u"From price"),
+        description=_(u"This is a flag indicating if the price should be displayed with a caveat indicating that the actual price may be different."),
+        required=False,
+    )
+
+    buyUrl = schema.URI(
+        title=_(u"Buy URL, include 'http://'"),
+        description=_(u"The URL of the page at which a shopper can buy the product. This is converted into a click tracking URL containing the product Ad ID, publisher Web site ID and BUYURL."),
+        required=True,
+    )
+
+# required is True or False ?
+    impressionUrl = schema.URI(
+        title=_(u"Impression URL, include 'http://'"),
+        description=_(u"Impression tracking code. This is an image tag for a 1x1 pixel that uses the product's Ad ID and the subscription's Web site ID. This must be displayed in order to track impressions for the product."),
+        required=False,
+    )
+
+    imageUrl = schema.URI(
+        title=_(u"Image URL, include 'http://'"),
+        description=_(u"Location of the advertiser-hosted product image."),
+        required=False,
+    )
+
+    advertiserCategory = schema.TextLine(
+        title=_(u"Advertiser category"),
+        description=_(u"This field is populated by advertisers who are using their own category scheme for products."),
+        required=False,
+    )
+
+    thirdPartyId = schema.TextLine(
+        title=_(u"Third party ID"),
+        description=_(u"Used by an advertiser for a publisher's category ID or any other information used to tailor a catalog to a specific publisher."),
+        required=False,
+    )
+
+    thirdPartyCategory = schema.TextLine(
+        title=_(u"Third party category"),
+        description=_(u"Third party category, may be comma-separated. Used to tailor a product catalog to a specific publisher's category structure."),
+        required=False,
+    )
+
+    author = schema.TextLine(
+        title=_(u"Author"),
+        description=_(u"Used for books."),
+        required=False,
+    )
+
+    artist = schema.TextLine(
+        title=_(u"Artist"),
+        description=_(u"Used for recorded media."),
+        required=False,
+    )
+
+    publicationTitle = schema.TextLine(
+        title=_(u"Publication title"),
+        description=_(u"Used for books and recorded media."),
+        required=False,
+    )
+
+    publisher = schema.TextLine(
+        title=_(u"Publisher"),
+        description=_(u"Used for books."),
+        required=False,
+    )
+
+    label = schema.TextLine(
+        title=_(u"Label"),
+        description=_(u"Publisher of recorded media(Sony, etc)."),
+        required=False,
+    )
+
+    format = schema.TextLine(
+        title=_(u"Format"),
+        description=_(u"For example: CD=Compact Disc, MC=Cassette, LP=Long Play Record, DVD=Digital Video Disk, VHS=VHS Video."),
+        required=False,
+    )
+
+    special = schema.TextLine(
+        title=_(u"Special"),
+        description=_(u"Used to denote a special offer. Can be used by a publisher to identify unique products, Will be YES, NO or empty."),
+        required=False,
+    )
+
+    gift = schema.TextLine(
+        title=_(u"Gift"),
+        description=_(u"Indicates whether or not the product is suggested as a gift item, Will be YES, NO or empty."),
+        required=False,
+    )
+
+    promotionalText = schema.TextLine(
+        title=_(u"Promotional text"),
+        description=_(u"Short text accompanying a promotion."),
+        required=False,
+    )
+
+    #startDate, endDate, useing dexterity behavior
+
+    offLine = schema.TextLine(
+        title=_(u"Offline"),
+        description=_(u"Indicates whether the offer is available offline (as in available through retail store), Will be YES, NO or empty."),
+        required=False,
+    )
+
+    onLine = schema.TextLine(
+        title=_(u"Online"),
+        description=_(u"Indicates whether the offer is available online (as in available through Web site), Will be YES, NO or empty."),
+        required=False,
+    )
+
+    inStock = schema.TextLine(
+        title=_(u"In stock"),
+        description=_(u"Indicates whether the product is currently in the advertiser's inventory, Will be YES or NO."),
+        required=False,
+    )
+
+    condition = schema.TextLine(
+        title=_(u"Condition"),
+        description=_(u"Condition of product, ex. 'Will be New', 'Used' or 'Refurbished'."),
+        required=False,
+    )
+
+    warranty = schema.TextLine(
+        title=_(u"Warranty"),
+        description=_(u"Description of warranty accompanying the product."),
+        required=False,
+    )
+
+    standardShippingCost =schema.Float(
+        title=_(u"Standard shipping cost"),
+        description=_(u"Usually is the cost for the typical standard, lowest cost shipping method. This is provided for informational purposes and the actual shipping cost could vary depending on the visitor."),
+        required=False,
+    )
 
 
 
