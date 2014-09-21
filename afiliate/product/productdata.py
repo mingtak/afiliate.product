@@ -16,6 +16,7 @@ from plone.namedfile.interfaces import IImageScaleTraversable
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
+from plone.indexer import indexer
 
 from afiliate.product import MessageFactory as _
 
@@ -254,7 +255,17 @@ class IProductData(form.Schema, IImageScaleTraversable):
         required=False,
     )
 
+@indexer(IProductData)
+def keywords_indexer(obj):
+    keywordsList = obj.keywords.split(',')
+    return keywordsList
+grok.global_adapter(keywords_indexer, name='keywords')
 
+@indexer(IProductData)
+def thirdPartyCategory_indexer(obj):
+    thirdPartyCategoryList = obj.thirdPartyCategory.split(',')
+    return thirdPartyCategoryList
+grok.global_adapter(thirdPartyCategory_indexer, name='thirdPartyCategory')
 
 
 class ProductData(Container):
