@@ -17,6 +17,8 @@ from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from plone.indexer import indexer
+from mingtak.advertiser import advertiser
+
 
 from afiliate.product import MessageFactory as _
 
@@ -25,6 +27,17 @@ class IProductData(form.Schema, IImageScaleTraversable):
     """
     Prodcut data for affiliate program.
     """
+#    form.widget(advertiserName=AutocompleteMultiFieldWidget)
+    advertiser = RelationList(
+        title=_(u"Advertiser name"),
+        value_type=RelationChoice(
+            source=ObjPathSourceBinder(
+                object_provides=advertiser.IAdvertiser.__identifier__,
+            ),
+        ),
+        required=False,
+    )
+
     programName = schema.TextLine(
         title=_(u"Program name"),
         description=_(u"Nname of the advertiser program associated with the product."),
