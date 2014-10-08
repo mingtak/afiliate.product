@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_catalog">
+
     <index name="programName" meta_type="ZCTextIndex">
         <indexed_attr value="programName"/>
         <extra name="index_type" value="Okapi BM25 Rank"/>
@@ -117,10 +118,10 @@
     </index>
     <column value="thirdPartyCategory"/>
 
-    <index name="author" meta_type="FieldIndex">
-        <indexed_attr value="author"/>
+    <index name="publicationAuthor" meta_type="FieldIndex">
+        <indexed_attr value="publicationAuthor"/>
     </index>
-    <column value="author"/>
+    <column value="publicationAuthor"/>
 
     <index name="artist" meta_type="FieldIndex">
         <indexed_attr value="artist"/>
@@ -199,4 +200,3 @@
     <column value="standardShippingCost"/>
 
 </object>
-

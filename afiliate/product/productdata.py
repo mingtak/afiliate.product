@@ -53,7 +53,7 @@ class IProductData(form.Schema, IImageScaleTraversable):
     catalogName = schema.TextLine(
         title=_(u"Catalog name"),
         description=_(u"Indicates the name of the associated product catalog."),
-        required=True,
+        required=False,
     )
 
     lastUpdated = schema.Datetime(
@@ -62,6 +62,7 @@ class IProductData(form.Schema, IImageScaleTraversable):
         required=True,
     )
 
+    # productName is "name" part of the xml file
     productName = schema.TextLine(
         title=_(u"Product's name"),
         description=_(u"The product's name"),
@@ -176,8 +177,8 @@ class IProductData(form.Schema, IImageScaleTraversable):
         required=False,
     )
 
-    author = schema.TextLine(
-        title=_(u"Author"),
+    publicationAuthor = schema.TextLine(
+        title=_(u"Publication author"),
         description=_(u"Used for books."),
         required=False,
     )
