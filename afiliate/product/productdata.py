@@ -281,6 +281,14 @@ def thirdPartyCategory_indexer(obj):
     return thirdPartyCategoryList
 grok.global_adapter(thirdPartyCategory_indexer, name='thirdPartyCategory')
 
+@indexer(IProductData)
+def discount_indexer(obj):
+    if obj.salePrice > 0.0 and obj.salePrice < obj.price:
+        discount = (obj.price - obj.salePrice)/obj.price
+        return discount
+    return 0.0
+grok.global_adapter(discount_indexer, name='discount')
+
 
 class ProductData(Container):
     grok.implements(IProductData)

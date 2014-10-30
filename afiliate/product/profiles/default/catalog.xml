@@ -199,4 +199,10 @@
     </index>
     <column value="standardShippingCost"/>
 
+    <index name="discount" meta_type="FieldIndex">
+        <indexed_attr value="discount"/>
+    </index>
+    <column value="discount"/>
+
+
 </object>
